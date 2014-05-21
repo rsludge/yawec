@@ -1,0 +1,19 @@
+body {
+    background: #aaa;
+}
+
+.chat{
+    margin: 40px auto;
+    width: 800px;
+}
+
+.messages{
+    border: 1px solid black;
+    height: 400px;
+}
+
+.user_message{
+    border: 1px solid black;
+    margin-top: 10px;
+    height: 100px;
+}
