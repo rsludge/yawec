@@ -55,6 +55,7 @@ body {
 
 .username_box{
     margin-right: 10px;
+    font-weight: bold;
 }
 
 .message{
@@ -64,4 +65,13 @@ body {
 
 .message:nth-child(2n){
     background: #fff;
+}
+
+.event{
+    padding: 8px;
+    font-style: italic;
+}
+
+.nickname{
+    font-weight: bold;
 }

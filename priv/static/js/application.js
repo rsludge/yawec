@@ -13,6 +13,9 @@ var setName = function(channel){
         var username = $('.name_form .username_input').val();
         if(username.length){
             $('.username_box').text(username);
+            channel.send("new_user", {
+                username: username
+            })
             closePopup();
         }
     })
@@ -32,6 +35,10 @@ $(function(){
         channel.on("message", function(message){
             $('.messages').append('<div class="message"><span class="nickname">' + message.username + ':</span>' + message.content + '</div>');
         });
+
+        channel.on("new_user", function(message){
+            $('.messages').append('<div class="event"><span class="nickname">' + message.username + '</span> entered</div>');
+        })
 
         $('.user_message').on('submit', function(e){
             e.preventDefault();
