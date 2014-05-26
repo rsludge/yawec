@@ -5,12 +5,21 @@
     <link rel="stylesheet" href="static/css/application.css" />
   </head>
   <body>
+    <div class="overlay"></div>
+    <div class="popup">
+      <form class="name_form" action="#">
+        <label for="username_input">Set your name: </label>
+        <input type="text" id="username_input" name="username" class="username_input" />
+        <input type="submit" class="ok_button" value="Ok" />
+      </form>
+    </div>
     <section class="chat">
-      <div class="messages"></div>
-      <div class="user_message">
+      <form class="user_message" action="#">
+        <span class="username_box"></span>:
         <input type="text" class="message_input" name="message_input" />
         <button class="send_message">Send</button>
-      </div>
+      </form>
+      <div class="messages"></div>
     </section>
     <script type="text/javascript" src="/static/js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="/static/js/phoenix.js"></script>

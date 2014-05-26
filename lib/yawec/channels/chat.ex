@@ -6,7 +6,7 @@ defmodule Yawec.Channels.Chat do
   end
 
   def event(socket, "message", message) do
-    broadcast socket, "message", content: message["content"]
+    broadcast socket, "message", content: message["content"], username: message["username"]
     socket
   end
 end
